@@ -1,20 +1,24 @@
-const fs = require("fs/promises");
+const fs = require("fs");
+const { promisify } = require("util");
 const test = require("ava");
 const purge = require("./purge");
 const eleventyPlugin = require("./plugin");
+
+const fsWriteFile = promisify(fs.writeFile);
+const fsRm = promisify(fs.rm);
 
 test.before(async () => {
   const contents = `module.exports = {
     content: ["./_site/**/*.html"],
     css: ["./_site/**/*.css"],
   };`;
-  await fs.writeFile("./purgecss.config.js", contents);
-  await fs.writeFile("./purgecss-custom.config.js", contents);
+  await fsWriteFile("./purgecss.config.js", contents);
+  await fsWriteFile("./purgecss-custom.config.js", contents);
 });
 
 test.after(async () => {
-  await fs.rm("./purgecss.config.js");
-  await fs.rm("./purgecss-custom.config.js");
+  await fsRm("./purgecss.config.js");
+  await fsRm("./purgecss-custom.config.js");
 });
 
 test("does not throw with default config", async (t) => {

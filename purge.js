@@ -1,5 +1,8 @@
-const fs = require("fs/promises");
+const fs = require("fs");
+const { promisify } = require("util");
 const { PurgeCSS } = require("purgecss");
+
+const fsWriteFile = promisify(fs.writeFile);
 
 const defaultOptions = {
   config: "./purgecss.config.js",
@@ -22,7 +25,7 @@ module.exports = async function purge(options = {}) {
 
   for (const { file, css } of result) {
     log(`Writing ${file}`);
-    await fs.writeFile(file, css);
+    await fsWriteFile(file, css);
   }
 
   const durationInMs = (Date.now() - startTime).toFixed(1);
