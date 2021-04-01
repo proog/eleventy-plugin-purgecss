@@ -5,7 +5,7 @@ const purge = require("./purge");
 const eleventyPlugin = require("./plugin");
 
 const fsWriteFile = promisify(fs.writeFile);
-const fsRm = promisify(fs.rm);
+const fsUnlink = promisify(fs.unlink);
 
 test.before(async () => {
   const contents = `module.exports = {
@@ -17,8 +17,8 @@ test.before(async () => {
 });
 
 test.after(async () => {
-  await fsRm("./purgecss.config.js");
-  await fsRm("./purgecss-custom.config.js");
+  await fsUnlink("./purgecss.config.js");
+  await fsUnlink("./purgecss-custom.config.js");
 });
 
 test("does not throw with default config", async (t) => {
