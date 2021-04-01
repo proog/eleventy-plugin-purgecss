@@ -1,0 +1,28 @@
+{
+  "name": "eleventy-plugin-purgecss",
+  "version": "0.1.0",
+  "description": "Eleventy plugin that runs PurgeCSS after each build",
+  "main": "plugin.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "author": {
+    "name": "Per Mortensen",
+    "email": "per@permortensen.com",
+    "url": "https://permortensen.com/"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/proog/eleventy-plugin-purgecss.git"
+  },
+  "dependencies": {
+    "purgecss": "^4.0.3"
+  },
+  "devDependencies": {
+    "ava": "^3.15.0"
+  },
+  "peerDependencies": {
+    "@11ty/eleventy": ">=0.11.1"
+  }
+}

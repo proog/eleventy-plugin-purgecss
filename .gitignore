@@ -1,0 +1,3 @@
+node_modules/
+purgecss.config.js
+purgecss-custom.config.js
