@@ -1,6 +1,7 @@
 # eleventy-plugin-purgecss
 
 [![npm](https://img.shields.io/npm/v/eleventy-plugin-purgecss?style=for-the-badge)](https://www.npmjs.com/package/eleventy-plugin-purgecss)
+[![npm](https://img.shields.io/npm/dm/eleventy-plugin-purgecss?style=for-the-badge)](https://www.npmjs.com/package/eleventy-plugin-purgecss)
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/proog/eleventy-plugin-purgecss/Node.js%20CI?style=for-the-badge)](https://github.com/proog/eleventy-plugin-purgecss/actions/workflows/npm-test.yml)
 
 Eleventy plugin that runs [PurgeCSS](https://purgecss.com/) after each build. PurgeCSS makes stylesheets smaller by inspecting the content they are used in, then discarding any CSS that is not referenced.
