@@ -12,6 +12,7 @@
     "url": "https://permortensen.com/"
   },
   "license": "MIT",
+  "keywords": ["eleventy", "eleventy-plugin"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/proog/eleventy-plugin-purgecss.git"
