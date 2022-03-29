@@ -12,13 +12,16 @@
     "url": "https://permortensen.com/"
   },
   "license": "MIT",
-  "keywords": ["eleventy", "eleventy-plugin"],
+  "keywords": [
+    "eleventy",
+    "eleventy-plugin"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/proog/eleventy-plugin-purgecss.git"
   },
   "dependencies": {
-    "purgecss": "^4.1.1"
+    "purgecss": "^4.1.3"
   },
   "devDependencies": {
     "ava": "^3.15.0"
