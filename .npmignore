@@ -1,4 +1,5 @@
 .github/
-purgecss.config.js
-purgecss-custom.config.js
-test.js
+/purgecss.config.js
+/purgecss-custom.config.js
+demo/
+test/

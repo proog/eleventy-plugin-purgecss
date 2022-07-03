@@ -1,8 +1,8 @@
 const fs = require("fs");
 const { promisify } = require("util");
 const test = require("ava");
-const purge = require("./purge");
-const eleventyPlugin = require("./plugin");
+const purge = require("../purge");
+const eleventyPlugin = require("../plugin");
 
 const fsWriteFile = promisify(fs.writeFile);
 const fsUnlink = promisify(fs.unlink);
