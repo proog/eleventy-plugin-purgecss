@@ -4,7 +4,7 @@
   "description": "Eleventy plugin that runs PurgeCSS after each build",
   "main": "plugin.js",
   "scripts": {
-    "test": "ava"
+    "test": "ava --timeout=2m"
   },
   "author": {
     "name": "Per Mortensen",
