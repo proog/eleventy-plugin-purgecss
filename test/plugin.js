@@ -45,6 +45,9 @@ test("eleventy plugin registers afterBuild hook", async (t) => {
   t.plan(2);
 
   const mockEleventyConfig = {
+    versionCheck() {
+      return true;
+    },
     on(eventName, fn) {
       t.is(eventName, "afterBuild");
       t.true(typeof fn === "function");
