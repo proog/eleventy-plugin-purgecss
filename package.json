@@ -21,7 +21,7 @@
     "url": "git+https://github.com/proog/eleventy-plugin-purgecss.git"
   },
   "dependencies": {
-    "purgecss": "^4.1.3"
+    "purgecss": "^5.0.0"
   },
   "devDependencies": {
     "ava": "^4.3.0",
