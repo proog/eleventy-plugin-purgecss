@@ -23,8 +23,14 @@ module.exports = async function purge(options = {}) {
 
   const result = await new PurgeCSS().purge(options.config);
 
-  for (const { file, css } of result) {
+  for (const { file, css, rejected, rejectedCss } of result) {
     log(`Writing ${file}`);
+    if (rejected && rejected.length) {
+      log(`Rejected: ${rejected.join(", ")}`);
+    }
+    if (rejectedCss) {
+      log(`Rejected CSS: ${rejectedCss}`);
+    }
     await fsWriteFile(file, css);
   }
 
