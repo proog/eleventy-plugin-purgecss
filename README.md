@@ -20,7 +20,7 @@ Requires Eleventy 0.11.1 or higher.
 
 This plugin executes PurgeCSS every time Eleventy builds your site and is designed to purge output CSS files in-place.
 
-First, make sure you have a PurgeCSS configuration file, probably in the root of your project. Here is an example:
+First, make sure you have a [PurgeCSS configuration file](https://purgecss.com/configuration.html), probably in the root of your project. Here is an example:
 
 ```js
 // purgecss.config.js
@@ -69,6 +69,10 @@ You can then enable the plugin by setting the `NODE_ENV` environment variable to
 ```sh
 NODE_ENV=production eleventy # or whatever your build command is
 ```
+
+### Troubleshooting
+
+It can be useful to check that PurgeCSS removes the CSS you expect. If you enable the `rejected` or `rejectedCss` options in your PurgeCSS configuration, the plugin will output the purged CSS to the terminal (unless the plugin is set to `quiet`).
 
 ## Known issues
 
