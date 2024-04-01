@@ -9,8 +9,8 @@ const fsUnlink = promisify(fs.unlink);
 
 test.before(async () => {
   const contents = `module.exports = {
-    content: ["./_site/**/*.html"],
-    css: ["./_site/**/*.css"],
+    content: [],
+    css: [],
   };`;
   await fsWriteFile("./purgecss.config.js", contents);
   await fsWriteFile("./purgecss-custom.config.js", contents);
