@@ -3,14 +3,14 @@ const { promisify } = require("util");
 const child_process = require("child_process");
 const path = require("path");
 const test = require("ava");
-const del = require("del");
+const { deleteAsync } = require("del");
 
 const exec = promisify(child_process.exec);
 const readFile = promisify(fs.readFile);
 
 for (const cwd of ["./demo", "./demo-v3"]) {
   test.before(async () => {
-    await del(path.join(cwd, "_site"));
+    await deleteAsync(path.join(cwd, "_site"));
     await exec("npm install", { cwd });
   });
 
