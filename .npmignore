@@ -2,4 +2,5 @@
 /purgecss.config.js
 /purgecss-custom.config.js
 demo/
+demo-v3/
 test/
